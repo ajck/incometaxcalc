@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html class="" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/styles.css"> <!-- Finimize Stylesheets -->
+    <link rel="stylesheet" href="css/my_styles.css"> <!-- Alex Kerr stylesheet -->
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'>
+	</head>
+	<body class="bodycolours">
+
+	<section id="main">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-md-12">
+					<div id="firstpage" class="">
+						<div class="header-content">
+							<div class="header-content-inner">
+								<h1 class="text-center whitetext"><strong>Don't let income tax drive you bananas...</strong></h1>
+							</div>
+							<div>
+								<h1 class="text-center whitetext"><strong>Enter your income and see this banana dance!</strong></h1>
+								<h4 class="text-center whitetext"><strong>(and get your income tax calculated)</strong></h4>
+								<img class="center-block imgmargin" src="images/standing.gif" alt="Banana standing still">
+							</div>
+							<div class="incomediv">
+								<div>
+									<div class="row center-block">
+										<div class="col-sm-3 col-md-3">
+											<h4 class="whitetext"><strong>Income (£):</strong></h4>
+										</div>
+										<div class="col-sm-6 col-md-6">
+											<input name="alt_headerform_income1" type="number" pattern="number" class="form-control" id="alt_headerform_income1" required autofocus placeholder="👋&nbsp;&nbsp;Enter your income (£) ..."/>
+										</div>
+										<div class="col-sm-3 col-md-3">
+											<!-- Form Submit button -->
+											<span class="input-group-btn">
+												<a href="#" class="btn submit form-control" id="submitbtn1">Dance, banana!</a>
+											</span>
+										</div>
+									</div>
+								</div>					
+							</div>
+						</div>
+					</div>
+					<div id="secondpage" class="nodisplay">
+						<img src="images/dancing.gif" alt="Banana dancing!">
+						<h1>Income tax payable: £<span id="taxpayable"> <!-- Calculated tax goes in here! --> </span></h1>
+							<div data-large class="input-group">
+
+							<label for="alt_headerform_income2">And again  ? </label> <!-- style="display:none;" -->
+
+							<input name="alt_headerform_income2" type="number" pattern="number" class="form-control" id="alt_headerform_income2" required autofocus placeholder="👋&nbsp;&nbsp;Enter your income (£) ..."/>
+							<br><br>
+							<!-- Form Submit button -->
+							<span class="input-group-btn">
+								<a href="#" class="btn submit form-control" id="submitbtn2">Dance, banana!</a>
+							</span>
+
+							</div>	
+					</div>
+				</div>
+			</div>
+		</div>
+	<section>
+	
+	
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>	
+    <script src="js/my_script.js"></script>	
+	</body>
+</html>
