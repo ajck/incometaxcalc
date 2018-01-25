@@ -10,7 +10,7 @@
     margin-bottom: 50px;
 }
 
-#alt_headerform_income1 {
+.num_input {
     padding: 15px 15px;
     width: 100%;
     max-width: 400px;
@@ -28,7 +28,7 @@
 }
 
 @media all and (max-width: 768px) {
-#alt_headerform_income1 {
+.num_input {
         display:block;
         margin: auto;
         max-width: none;
@@ -36,31 +36,31 @@
     }
 }
 
-#alt_headerform_income1::-webkit-input-placeholder {
+.num_input::-webkit-input-placeholder {
     color: #AAB8C8
 }
 
-#alt_headerform_income1::-moz-placeholder {
+.num_input::-moz-placeholder {
     color: #AAB8C8;
     opacity: 1
 }
 
-#alt_headerform_income1:-ms-input-placeholder {
+.num_input:-ms-input-placeholder {
     color: #AAB8C8
 }
 
-#alt_headerform_income1:-moz-placeholder {
+.num_input:-moz-placeholder {
     color: #AAB8C8;
     opacity: 1
 }
 
-#alt_headerform_income1:focus {
+.num_input:focus {
     border: 2px solid #00b2ff;
     background: #ffffff;
     outline: none
 }
 
-#submitbtn1 {
+.submit_btn {
     border-radius: 10px;
     background: #fff;
     color: #00b2ff;
@@ -75,7 +75,7 @@
 }
 
 @media all and (max-width: 768px) {
-#submitbtn1 {
+.submit_btn {
         display:block;
         margin: 10px auto;
         max-width: none;
@@ -83,12 +83,12 @@
     }
 }
 
-#submitbtn1:hover {
+.submit_btn:hover {
     box-shadow: inset 0px -1px 0px #00b2ff;
-    background: ##d5ecf7
+    background: #ffde3b
 }
 
-#submitbtn1:active {
+.submit_btn:active {
     box-shadow: inset 0px 1px 0px #038AD0;
     background: #00b2ff;
     top: 0px

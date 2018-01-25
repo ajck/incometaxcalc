@@ -1,0 +1,43 @@
+
+$('#submitbtn1').click(function(e) // Income submit button clicked
+{
+var income;
+
+if($(this).id() ==   // Check which page we're on
+	{
+	// Firstpage
+	$('#firstpage, #secondpage').toggleClass('nodisplay'); // Hide first page, show second page
+	income = $('#income1').val();
+	}
+else
+	{
+	income = $('#income2').val();
+	// Make banana dance:
+	
+	}
+
+// Calc tax:
+var threshold = [0, 11500, 45000, 150000];
+var rates = [0, 20, 40, 45];
+var taxpayable = [];
+var taxable_amount;
+var total_tax;
+
+// Loop through tax bands in reverse, calculating tax for each band, from highest band to lowest, and adding to total each time:
+// (We keep tax for each band stored separately so details can be displayed in a pop up modal)
+for(i = rates.length - 1; i > 0; i--)
+	{
+	if((taxable_amount = income - threshold[i]) > 0) taxpayable[i] = taxable_amount * (rates[i] / 100);
+	income -= taxable_amount;
+	total_tax += taxpayable[i];
+	}
+	
+$('#taxpayable').val(total_tax);
+
+};
+
+$('#income2').focus(function(e) // Income input on 2nd page activated
+{
+// Put banana to sleep by changing image:
+$('#dance_img').attr('src', 'images/sleeping.gif');
+}
