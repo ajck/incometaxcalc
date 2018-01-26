@@ -5,21 +5,22 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="css/styles.css"> <!-- Finimize Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css"> <!-- Finimize Stylesheet -->
     <link rel="stylesheet" href="css/my_styles.css"> <!-- Alex Kerr stylesheet -->
 
     <!-- Fonts & Icons -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'>
 	</head>
-	<body class="bodycolours">
+	<body>
 
 	<section id="main">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12 col-md-12">
-					<div id="firstpage" class="nodisplay">
+					<div id="firstpage" class="">
 						<div class="header-content">
+							<!-- Intro text blocks -->
 							<div class="header-content-inner">
 								<h1 class="text-center whitetext"><strong>Don't let income tax drive you bananas...</strong></h1>
 							</div>
@@ -28,11 +29,13 @@
 								<h4 class="text-center whitetext"><strong>(and get your tax calculated)</strong></h4>
 								<img class="center-block imgmargin" src="images/standing.gif" alt="Banana standing still">
 							</div>
+							
+							<!-- Income entry form -->
 							<div class="incomediv">
 								<div>
-									<div class="row center-block">
-										<div class="col-sm-2 col-md-2">
-											<h4 class="whitetext pull-right"><strong>Income (£):</strong></h4>
+									<div class="row">
+										<div class="col-sm-2 col-md-2 col-sm-offset-2 col-md-offset-2">
+											<h4 class="whitetext pull-right topmargin_15px"><strong>Income (£):</strong></h4>
 										</div>
 										<div class="col-sm-3 col-md-3">
 											<input name="income1" type="number" pattern="number" class="form-control num_input" id="income1" required autofocus placeholder="👋&nbsp;&nbsp;Enter your income (£) ..."/>
@@ -48,14 +51,26 @@
 							</div>
 						</div>
 					</div>
-					<div id="secondpage"> <!-- class="nodisplay"> -->
-						<img class="center-block imgmargin" src="images/dancing.gif" alt="Banana dancing!" id="dance_img">
-						<h1 class="text-center whitetext"><strong>Income tax payable: £<span id="taxpayable"> <!-- Calculated tax goes in here! --> </span></strong></h1><h4><a href="">See details</a>
-						<div class="incomediv">
+					
+					<!-- Second page with income tax result -->
+					<div id="secondpage" class="nodisplay">
+						<img class="center-block imgmargin setimgheight" src="images/dancing.gif" alt="Banana dancing!" id="dance_img">
+						<!-- Info block -->
+						<div class="row col-centered">
+							<div class="col-sm-6 col-md-6 col-sm-offset-3 col-md-offset-3">
+								<h1 class="text-center whitetext"><strong>Income tax payable: £<span id="taxpayable"> <!-- Calculated tax goes in here! --> </span></strong></h1>
+							</div>
+							<div class="col-sm-2 col-md-2 topmargin_20px">
+								<h4><a href="" class="whitetext" data-toggle="modal" data-target="#detailsmodal">See details</a></h4>
+							</div>
+						</div>
+						
+						<!-- Allow user to update figure -->
+						<div class="incomediv topmargin_20px">
 							<div>
-								<div class="row center-block">
-									<div class="col-sm-2 col-md-2">
-										<h4 class="whitetext pull-right"><strong>And again? </strong></h4>
+								<div class="row col-centered">
+									<div class="col-sm-2 col-md-2 col-sm-offset-2 col-md-offset-2">
+										<h4 class="whitetext pull-right topmargin_15px"><strong>And again? </strong></h4>
 									</div>
 									<div class="col-sm-3 col-md-3">
 										<input name="income2" type="number" pattern="number" class="form-control num_input" id="income2" required autofocus placeholder="👋&nbsp;&nbsp;Enter your income (£) ..."/>
@@ -75,7 +90,43 @@
 		</div>
 	<section>
 	
-	
+	<!-- Income tax details pop up modal -->
+	<div class="modal fade" id="detailsmodal" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Income tax details</h4>
+				</div>
+				<div class="modal-body">
+					<div class="table-responsive">
+					<table class="table table-bordered">
+						<tr>
+							<th>Tax rate</th>
+							<th>Amount payable</th>
+						</tr>
+						<tr>
+							<td>20%</td>
+							<td id="table-20"><!-- Number inserted by JS --></td>
+						</tr>
+						<tr>
+							<td>40%</td>
+							<td id="table-40"><!-- Number inserted by JS --></td>
+						</tr>
+						<tr>
+							<td>45%</td>
+							<td id="table-45"><!-- Number inserted by JS --></td>
+						</tr>
+					</table>
+					</div>
+				</div>
+				<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
     <!-- jQuery -->
     <script src="js/jquery.min.js"></script>
     <!-- Bootstrap Core JavaScript -->

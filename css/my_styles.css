@@ -61,7 +61,7 @@
 }
 
 .submit_btn {
-    border-radius: 10px;
+    border-radius: 10px !important;
     background: #fff;
     color: #00b2ff;
     font-weight: 700;
@@ -93,3 +93,13 @@
     background: #00b2ff;
     top: 0px
 }
+
+a:hover, a:focus {
+    color: black;
+    text-decoration: underline;
+}
+
+.topmargin_20px { margin-top: 20px; }
+.topmargin_15px { margin-top: 15px; }
+
+.setimgheight { height: 246px; }
